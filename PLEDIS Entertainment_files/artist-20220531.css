@@ -1,0 +1,93 @@
+/* 
+	2022.05.31 추가 
+	중복 아티스트 기능 추가	
+	희문
+*/
+.artist_list li.multi-profile {
+	position: relative;
+	cursor: pointer;
+}
+
+.artist_list li.multi-profile>img {}
+
+.artist_list li.multi-profile>.wrap {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 590px;
+	height: 320px;
+	z-index: 10;
+	border: 10px solid rgb(213, 38, 44);
+	background-color: rgba(213, 38, 44, 0.7);
+	box-sizing: border-box;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	-webkit-transition: opacity 0.2s ease;
+	-moz-transition: opacity 0.2s ease;
+	-ms-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+}
+
+.artist_list li.multi-profile:hover>.name {
+	color: #ec332d;
+}
+
+.artist_list li.multi-profile:hover>.wrap {
+	opacity: 1;
+	transition: opacity 0.2s ease;
+	-webkit-transition: opacity 0.2s ease;
+	-moz-transition: opacity 0.2s ease;
+	-ms-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+}
+
+
+.artist_list li.multi-profile>.wrap>.col {
+	flex: 1 1 auto;
+	position: relative;
+	width: 50%;
+	height: 100%;
+
+}
+
+.artist_list li.multi-profile>.wrap>.col>a {
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	padding: 30px 0;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+.artist_list li.multi-profile>.wrap>.col:first-child>a {
+	border-right: 1px solid #fff;
+}
+
+.artist_list li.multi-profile>.wrap>.col>a>img {
+	display: inline-block;
+}
+
+.artist_list li.multi-profile>.wrap>.col>a>strong {
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+}
+
+.artist_list li.multi-profile>.wrap>.col>a>em {
+
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	line-height: 1;
+	height: auto;
+
+}
